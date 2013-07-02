@@ -10,10 +10,7 @@ def karatsuba(x,y):
         p=karatsuba(a,c)
         q=karatsuba(b,d)
         r=karatsuba(a,d)+karatsuba(b,c)
-        if n%2==0:
-            m=n/2
-        else:
-            m=n/2
+        m=n/2
         return (10**n)*p+(10**m)*r+q
 
 print karatsuba("1234","5678")    
