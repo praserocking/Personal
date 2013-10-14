@@ -11,7 +11,7 @@ vector<int>ans;
 int cnt;
 void bfs(int i,int j){
 	pair<int,int>tmp;
-	cnt=0;
+	cnt=1;
 	queue<pair<int,int> >q;
 	q.push(make_pair(i,j));
 	while(!q.empty()){
@@ -19,12 +19,12 @@ void bfs(int i,int j){
 		q.pop();
 		for(int k=-1;k<=1;k++)
 			for(int l=-1;l<=1;l++)
-				if(graph[tmp.first+k][tmp.second+k]==graph[tmp.first][tmp.second]+1&&(k!=0&&l!=0)){
+				if(graph[tmp.first+k][tmp.second+k]==(graph[tmp.first][tmp.second]+1)&&(k!=0&&l!=0)){
 					cnt++;
 					q.push(make_pair(tmp.first+k,tmp.second+k));
 				}
-		ans.push_back(cnt);
 	}
+	ans.push_back(cnt);
 }
 int main(){
 int r,c;
