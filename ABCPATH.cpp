@@ -18,11 +18,11 @@ void bfs(int i,int j){
 		tmp=q.front();
 		q.pop();
 		for(int k=-1;k<=1;k++)
-			for(int l=-1;l<=1;l++)
-				if(graph[tmp.first+k][tmp.second+k]==(graph[tmp.first][tmp.second]+1)&&(k!=0&&l!=0)){
-					cnt++;
-					q.push(make_pair(tmp.first+k,tmp.second+k));
-				}
+		for(int l=-1;l<=1;l++)
+			if(graph[tmp.first+k][tmp.second+k]==(graph[tmp.first][tmp.second]+1)&&(k!=0&&l!=0)){
+				cnt++;
+				q.push(make_pair(tmp.first+k,tmp.second+k));
+			}
 	}
 	ans.push_back(cnt);
 }
